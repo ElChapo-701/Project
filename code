@@ -7,7 +7,7 @@ ECHO = 24
 buzzer = 3
 led = 2
 
-print(" Distance Measurement in progress")
+print(" Motion Detected")
 
 GPIO.setup(TRIG,GPIO.OUT)
 GPIO.setup(ECHO,GPIO.IN)
@@ -39,9 +39,9 @@ while True:
     if distance > 20:
         GPIO.output(buzzer, GPIO.LOW)
         GPIO.output(led, GPIO.LOW)
-        print("BUZZER ON/LED OFF")
+        
     else:
-        print("BUZZER OFF/LED ON")
+        
         GPIO.output(buzzer, GPIO.HIGH)
         GPIO.output(led, GPIO.HIGH)
 
